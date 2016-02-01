@@ -11,7 +11,6 @@ namespace Treinamento.Infraestructure.Data.Context
         public TreinamentoContext()
             : base("Treinamento")
         {
-
         }
 
         public DbSet<Arquivo> Arquivo { get; set; }
