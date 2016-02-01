@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Treinamento.Domain
+namespace Treinamento.Domain.Entities
 {
     public class TipoContato
     {

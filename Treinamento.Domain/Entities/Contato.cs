@@ -8,7 +8,7 @@ namespace Treinamento.Domain.Entities
         public int IdPessoa { get; set; }
         public string Descricao { get; set; }
         public int Tipo { get; set; }
-        public DateTime DataCriacao { get; set; }
+        public DateTime DataCadastro { get; set; }
         public DateTime DataAtualizacao { get; set; }
         public int IdUsuario { get; set; }
     }
