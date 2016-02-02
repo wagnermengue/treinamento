@@ -44,6 +44,7 @@ namespace Treinamento.Infraestructure.Data.Context
 
 
             modelBuilder.Configurations.Add(new PessoaConfiguration());
+            modelBuilder.Configurations.Add(new UsuarioConfiguration());
         }
 
         public override int SaveChanges()
