@@ -5,6 +5,7 @@ namespace Treinamento.Domain.Entities
     {
         public int IdEndereco { get; set; }
         public int IdPessoa { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
         public string CEP { get; set; }
         public string Logradouro { get; set; }
         public int Numero { get; set; }
@@ -15,6 +16,7 @@ namespace Treinamento.Domain.Entities
         public string Bairro { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime DataAtualizacao { get; set; }
-        public int CodigoUsuario { get; set; }
+        public int IdUsuario { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

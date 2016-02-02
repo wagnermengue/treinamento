@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using Treinamento.Domain.Entities;
+using Treinamento.Infraestructure.Data.EntityConfig;
 
 namespace Treinamento.Infraestructure.Data.Context
 {
@@ -40,6 +41,9 @@ namespace Treinamento.Infraestructure.Data.Context
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
+
+
+            modelBuilder.Configurations.Add(new PessoaConfiguration());
         }
 
         public override int SaveChanges()
