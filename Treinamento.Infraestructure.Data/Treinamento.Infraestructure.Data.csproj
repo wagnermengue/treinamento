@@ -50,7 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\TreinamentoContext.cs" />
+    <Compile Include="EntityConfig\ArquivoConfiguration.cs" />
+    <Compile Include="EntityConfig\ContatoConfiguration.cs" />
     <Compile Include="EntityConfig\PessoaConfiguration.cs" />
+    <Compile Include="EntityConfig\EnderecoConfiguration.cs" />
+    <Compile Include="EntityConfig\PrioridadeConfiguration.cs" />
+    <Compile Include="EntityConfig\ProjetoConfiguration.cs" />
+    <Compile Include="EntityConfig\StatusConfiguration.cs" />
+    <Compile Include="EntityConfig\TarefaConfiguration.cs" />
+    <Compile Include="EntityConfig\TipoContatoConfiguration.cs" />
     <Compile Include="EntityConfig\UsuarioConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

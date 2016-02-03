@@ -6,7 +6,6 @@ namespace Treinamento.Domain.Entities
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        //public int IdPessoa { get; set; }
         public virtual Pessoa Pessoa { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
