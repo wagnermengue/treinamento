@@ -10,7 +10,7 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
             HasKey(u => u.IdUsuario);
 
             HasRequired(u => u.Pessoa)
-                .WithRequiredDependent(u => u.Usuario);
+                .WithRequiredDependent();
         }
     }
 }
