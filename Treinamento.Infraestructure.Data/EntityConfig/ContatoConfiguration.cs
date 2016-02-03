@@ -7,7 +7,19 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
     {
         public ContatoConfiguration()
         {
-            HasKey(e => e.IdContato);
+            HasKey(c => c.IdContato);
+
+            HasRequired(c => c.Pessoa)
+                .WithMany()
+                .HasForeignKey(c => c.IdPessoa);
+
+            HasRequired(c => c.TipoContato)
+                .WithMany()
+                .HasForeignKey(c => c.IdTipo);
+
+            HasRequired(c => c.Usuario)
+                .WithMany()
+                .HasForeignKey(c => c.IdUsuario);
         }
 
     }

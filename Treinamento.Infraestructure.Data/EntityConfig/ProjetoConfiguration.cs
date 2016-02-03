@@ -8,6 +8,19 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
         public ProjetoConfiguration()
         {
             HasKey(p => p.IdProjeto);
+
+            HasRequired(p => p.Pessoa)
+                .WithMany()
+                .HasForeignKey(p => p.IdPessoa);
+
+            HasRequired(p => p.Status)
+                .WithMany()
+                .HasForeignKey(p => p.IdStatus);
+
+            HasRequired(p => p.Usuario)
+                .WithMany()
+                .HasForeignKey(p => p.IdUsuario);
+
         }
 
     }

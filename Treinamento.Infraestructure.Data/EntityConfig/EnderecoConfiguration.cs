@@ -8,6 +8,14 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
         public EnderecoConfiguration()
         {
             HasKey(e => e.IdEndereco);
+
+            HasRequired(e => e.Pessoa)
+                .WithMany()
+                .HasForeignKey(e => e.IdPessoa);
+
+            HasRequired(e => e.Usuario)
+                .WithMany()
+                .HasForeignKey(e => e.IdUsuario);
         }
 
     }
