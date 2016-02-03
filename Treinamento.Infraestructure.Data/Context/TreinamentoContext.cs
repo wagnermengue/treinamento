@@ -43,7 +43,15 @@ namespace Treinamento.Infraestructure.Data.Context
                 .Configure(p => p.HasMaxLength(100));
 
 
+            modelBuilder.Configurations.Add(new ArquivoConfiguration());
+            modelBuilder.Configurations.Add(new ContatoConfiguration());
+            modelBuilder.Configurations.Add(new EnderecoConfiguration());
             modelBuilder.Configurations.Add(new PessoaConfiguration());
+            modelBuilder.Configurations.Add(new PrioridadeConfiguration());
+            modelBuilder.Configurations.Add(new ProjetoConfiguration());
+            modelBuilder.Configurations.Add(new StatusConfiguration());
+            modelBuilder.Configurations.Add(new TarefaConfiguration());
+            modelBuilder.Configurations.Add(new TipoContatoConfiguration());
             modelBuilder.Configurations.Add(new UsuarioConfiguration());
         }
 

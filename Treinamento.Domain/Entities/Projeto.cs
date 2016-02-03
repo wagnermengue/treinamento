@@ -13,6 +13,7 @@ namespace Treinamento.Domain.Entities
         public int IdStatus { get; set; }
         public virtual Status Status { get; set; }
         public int Responsavel { get; set; }
+        public virtual Pessoa PessoaResponsavel { get; set; }
         public bool Ativo { get; set; }
         public DateTime DataAtualizacao { get; set; }
         public int IdUsuario { get; set; }

@@ -13,6 +13,10 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
                 .WithMany()
                 .HasForeignKey(p => p.IdPessoa);
 
+            HasRequired(p => p.PessoaResponsavel)
+                .WithMany()
+                .HasForeignKey(p => p.Responsavel);
+
             HasRequired(p => p.Status)
                 .WithMany()
                 .HasForeignKey(p => p.IdStatus);
