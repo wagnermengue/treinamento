@@ -1,4 +1,0 @@
-C:\Users\wmengue\Documents\Mengue GVDASA\ProjetosVS\Git\Treinamento\Treinamento.Domain\bin\Debug\Treinamento.Domain.dll
-C:\Users\wmengue\Documents\Mengue GVDASA\ProjetosVS\Git\Treinamento\Treinamento.Domain\bin\Debug\Treinamento.Domain.pdb
-C:\Users\wmengue\Documents\Mengue GVDASA\ProjetosVS\Git\Treinamento\Treinamento.Domain\obj\Debug\Treinamento.Domain.dll
-C:\Users\wmengue\Documents\Mengue GVDASA\ProjetosVS\Git\Treinamento\Treinamento.Domain\obj\Debug\Treinamento.Domain.pdb
