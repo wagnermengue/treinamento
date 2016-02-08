@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Tarefa
+    public class TarefaViewModel
     {
         [Key]
         public int IdTarefa { get; set; }

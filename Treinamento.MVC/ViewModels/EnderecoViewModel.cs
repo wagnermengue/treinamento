@@ -3,23 +3,31 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Contato
+    public class EnderecoViewModel
     {
         [Key]
-        public int IdContato { get; set; }
+        public int IdEndereco { get; set; }
 
         public int IdPessoa { get; set; }
 
         //public virtual Pessoa Pessoa { get; set; }
 
-        [Required(ErrorMessage = "Preencha a descrição")]
-        [MaxLength(60, ErrorMessage = "Número máximo de caracteres é {0}")]
-        [MinLength(2, ErrorMessage = "Número mínimo de caracteres é {0}")]
-        public string Descricao { get; set; }
+        [Required(ErrorMessage = "É necessário preencher o CEP")]
+        public string CEP { get; set; }
 
-        public int IdTipo { get; set; }
+        public string Logradouro { get; set; }
 
-        //public virtual TipoContato TipoContato { get; set; }
+        public int Numero { get; set; }
+
+        public string Complemento { get; set; }
+
+        public string Pais { get; set; }
+
+        public string Estado { get; set; }
+
+        public string Cidade { get; set; }
+
+        public string Bairro { get; set; }
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }

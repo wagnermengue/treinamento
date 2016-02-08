@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Projeto
+    public class ProjetoViewModel
     {
         [Key]
         public int IdProjeto { get; set; }

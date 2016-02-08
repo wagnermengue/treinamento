@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Arquivo
+    public class ArquivoViewModel
     {
         [Key]
         public int IdArquivo { get; set; }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Status
+    public class StatusViewModel
     {
         [Key]
         public int IdStatus { get; set; }

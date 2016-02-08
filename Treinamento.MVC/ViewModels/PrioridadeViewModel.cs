@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class Prioridade
+    public class PrioridadeViewModel
     {
         [Key]
         public int IdPrioridade { get; set; }

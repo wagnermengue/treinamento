@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Treinamento.MVC.ViewModels
 {
-    public class TipoContato
+    public class TipoContatoViewModel
     {
         [Key]
         public int IdTipoContato { get; set; }
