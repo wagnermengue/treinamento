@@ -10,7 +10,7 @@ namespace Treinamento.MVC.ViewModels
 
         public int IdPessoa { get; set; }
 
-        //public virtual Pessoa Pessoa { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
 
         [Required(ErrorMessage = "É necessário preencher o CEP")]
         public string CEP { get; set; }
@@ -38,6 +38,6 @@ namespace Treinamento.MVC.ViewModels
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
 
-        //public virtual Usuario Usuario { get; set; }
+        public virtual UsuarioViewModel Usuario { get; set; }
     }
 }

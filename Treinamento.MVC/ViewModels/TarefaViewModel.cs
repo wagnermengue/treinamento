@@ -11,7 +11,7 @@ namespace Treinamento.MVC.ViewModels
 
         public int IdProjeto { get; set; }
 
-        //public virtual Projeto Projeto { get; set; }
+        public virtual ProjetoViewModel Projeto { get; set; }
 
         [Required(ErrorMessage = "É necessário preencher a descrição")]
         [MinLength(5, ErrorMessage = "Número mínimo de caracteres é {0}")]
@@ -21,11 +21,11 @@ namespace Treinamento.MVC.ViewModels
 
         public int IdPrioridade { get; set; }
 
-        //public virtual Prioridade Prioridade { get; set; }
+        public virtual PrioridadeViewModel Prioridade { get; set; }
 
         public int IdStatus { get; set; }
 
-        //public virtual Status Status { get; set; }
+        public virtual StatusViewModel Status { get; set; }
 
         public DateTime DataPrevista { get; set; }
 
@@ -33,7 +33,7 @@ namespace Treinamento.MVC.ViewModels
 
         public int Responsavel { get; set; }
 
-        //public virtual Pessoa Pessoa { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
 
         public int Peso { get; set; }
 
@@ -46,6 +46,6 @@ namespace Treinamento.MVC.ViewModels
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
 
-        //public virtual Usuario Usuario { get; set; }
+        public virtual UsuarioViewModel Usuario { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Treinamento.MVC.ViewModels
 
         public int IdPessoa { get; set; }
 
-        //public virtual Pessoa Pessoa { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
 
         [Required(ErrorMessage = "Preencha a descrição")]
         [MaxLength(60, ErrorMessage = "Número máximo de caracteres é {0}")]
@@ -19,7 +19,7 @@ namespace Treinamento.MVC.ViewModels
 
         public int IdTipo { get; set; }
 
-        //public virtual TipoContato TipoContato { get; set; }
+        public virtual TipoContatoViewModel TipoContato { get; set; }
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
@@ -30,6 +30,6 @@ namespace Treinamento.MVC.ViewModels
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
 
-        //public virtual Usuario Usuario { get; set; }
+        public virtual UsuarioViewModel Usuario { get; set; }
     }
 }

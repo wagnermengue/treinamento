@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,8 +15,8 @@ namespace Treinamento.MVC.ViewModels
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
 
-        //public virtual IEnumerable<Tarefa> Tarefas { get; set; }
+        public virtual IEnumerable<TarefaViewModel> Tarefas { get; set; }
 
-        //public virtual IEnumerable<Projeto> Projetos { get; set; }
+        public virtual IEnumerable<ProjetoViewModel> Projetos { get; set; }
     }
 }

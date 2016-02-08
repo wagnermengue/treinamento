@@ -10,7 +10,7 @@ namespace Treinamento.MVC.ViewModels
         [Key]
         public int IdUsuario { get; set; }
 
-        //public virtual Pessoa Pessoa { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
 
         [Required(ErrorMessage = "É necessário preencher o login")]
         public string Login { get; set; }
@@ -18,6 +18,7 @@ namespace Treinamento.MVC.ViewModels
         [Required(ErrorMessage = "É necessário preencher a senha")]
         [MinLength(8, ErrorMessage = "A senha precisa ter no mínimo {0} caracteres")]
         [MaxLength(24, ErrorMessage = "A senha precisa ter no máximo {0} caracteres")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "É necessário preencher um e-mail")]
@@ -33,14 +34,14 @@ namespace Treinamento.MVC.ViewModels
         [ScaffoldColumn(false)]
         public DateTime DataAtualizacao { get; set; }
 
-        //public virtual IEnumerable<Tarefa> Tarefas { get; set; }
+        public virtual IEnumerable<TarefaViewModel> Tarefas { get; set; }
 
-        //public virtual IEnumerable<Projeto> Projetos { get; set; }
+        public virtual IEnumerable<ProjetoViewModel> Projetos { get; set; }
 
-        //public virtual IEnumerable<Endereco> Enderecos { get; set; }
+        public virtual IEnumerable<EnderecoViewModel> Enderecos { get; set; }
 
-        //public virtual IEnumerable<Contato> Contatos { get; set; }
+        public virtual IEnumerable<ContatoViewModel> Contatos { get; set; }
 
-        //public virtual IEnumerable<Arquivo> Arquivos { get; set; }
+        public virtual IEnumerable<ArquivoViewModel> Arquivos { get; set; }
     }
 }

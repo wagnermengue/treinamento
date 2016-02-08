@@ -16,6 +16,6 @@ namespace Treinamento.MVC.ViewModels
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
 
-        //public virtual IEnumerable<Contato> Contatos { get; set; }
+        public virtual IEnumerable<ContatoViewModel> Contatos { get; set; }
     }
 }

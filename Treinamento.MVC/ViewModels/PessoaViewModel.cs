@@ -35,6 +35,6 @@ namespace Treinamento.MVC.ViewModels
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
 
-        //public virtual Usuario Usuario { get; set; }
+        public virtual UsuarioViewModel Usuario { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace Treinamento.MVC.ViewModels
 
 
         public int IdPessoa { get; set; }
-        //public virtual Pessoa Pessoa { get; set; }
+
+        public virtual PessoaViewModel Pessoa { get; set; }
 
         [DisplayName("Data previsa")]
         public DateTime DataPrevista { get; set; }
@@ -26,10 +27,12 @@ namespace Treinamento.MVC.ViewModels
         public DateTime DataRealizada { get; set; }
 
         public int IdStatus { get; set; }
-        //public virtual Status Status { get; set; }
+
+        public virtual StatusViewModel Status { get; set; }
 
         public int Responsavel { get; set; }
-        //public virtual Pessoa PessoaResponsavel { get; set; }
+
+        public virtual PessoaViewModel PessoaResponsavel { get; set; }
 
         public bool Ativo { get; set; }
 
@@ -38,6 +41,7 @@ namespace Treinamento.MVC.ViewModels
 
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
-        //public virtual Usuario Usuario { get; set; }
+
+        public virtual UsuarioViewModel Usuario { get; set; }
     }
 }
