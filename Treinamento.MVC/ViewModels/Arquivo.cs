@@ -9,6 +9,7 @@ namespace Treinamento.MVC.ViewModels
         public int IdArquivo { get; set; }
 
         public int IdProjeto { get; set; }
+
         //public virtual Projeto Projeto { get; set; }
 
         [Required(ErrorMessage = "Preencha o nome")]
@@ -23,6 +24,7 @@ namespace Treinamento.MVC.ViewModels
 
         [ScaffoldColumn(false)]
         public int IdUsuario { get; set; }
+
         //public virtual Usuario Usuario { get; set; }
     }
 }

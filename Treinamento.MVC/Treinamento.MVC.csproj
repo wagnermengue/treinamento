@@ -154,6 +154,15 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Arquivo.cs" />
+    <Compile Include="ViewModels\Contato.cs" />
+    <Compile Include="ViewModels\Endereco.cs" />
+    <Compile Include="ViewModels\Pessoa.cs" />
+    <Compile Include="ViewModels\Prioridade.cs" />
+    <Compile Include="ViewModels\Projeto.cs" />
+    <Compile Include="ViewModels\Status.cs" />
+    <Compile Include="ViewModels\Tarefa.cs" />
+    <Compile Include="ViewModels\TipoContato.cs" />
+    <Compile Include="ViewModels\Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
