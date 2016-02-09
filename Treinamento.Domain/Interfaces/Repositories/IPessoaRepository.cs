@@ -1,6 +1,6 @@
 ﻿using Treinamento.Domain.Entities;
 
-namespace Treinamento.Domain.Interfaces
+namespace Treinamento.Domain.Interfaces.Repositories
 {
     public interface IPessoaRepository : IRepositoryBase<Pessoa>
     {

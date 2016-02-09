@@ -155,6 +155,7 @@
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="Controllers\ArquivosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,6 +212,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Arquivos\Index.cshtml" />
+    <Content Include="Views\Arquivos\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -227,6 +230,10 @@
     <ProjectReference Include="..\Treinamento.Domain\Treinamento.Domain.csproj">
       <Project>{b6fcce0e-bebf-45a1-af38-68fc95a20eb3}</Project>
       <Name>Treinamento.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treinamento.Infraestructure.Data\Treinamento.Infraestructure.Data.csproj">
+      <Project>{a47ecc00-7a81-4258-86a4-27516e2fd12b}</Project>
+      <Name>Treinamento.Infraestructure.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

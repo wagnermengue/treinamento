@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Treinamento.Domain.Interfaces;
+using Treinamento.Domain.Interfaces.Repositories;
 using Treinamento.Infraestructure.Data.Context;
 using System.Data.Entity;
 
