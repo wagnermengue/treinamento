@@ -214,6 +214,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Arquivos\Index.cshtml" />
     <Content Include="Views\Arquivos\Create.cshtml" />
+    <Content Include="Views\Arquivos\Delete.cshtml" />
+    <Content Include="Views\Arquivos\Details.cshtml" />
+    <Content Include="Views\Arquivos\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -227,13 +230,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Treinamento.Application\Treinamento.Application.csproj">
+      <Project>{2a23c3a5-0f4c-46f7-bb33-800f85b8074c}</Project>
+      <Name>Treinamento.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Treinamento.Domain\Treinamento.Domain.csproj">
       <Project>{b6fcce0e-bebf-45a1-af38-68fc95a20eb3}</Project>
       <Name>Treinamento.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Treinamento.Infraestructure.Data\Treinamento.Infraestructure.Data.csproj">
-      <Project>{a47ecc00-7a81-4258-86a4-27516e2fd12b}</Project>
-      <Name>Treinamento.Infraestructure.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

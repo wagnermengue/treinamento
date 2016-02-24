@@ -1,0 +1,42 @@
+﻿@model Treinamento.MVC.ViewModels.ArquivoViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ArquivoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caminho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caminho)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdArquivo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

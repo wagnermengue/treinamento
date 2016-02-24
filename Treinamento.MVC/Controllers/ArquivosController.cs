@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Treinamento.Application.Interfaces;
 using Treinamento.Domain.Entities;
-using Treinamento.Infraestructure.Data.Repositories;
 using Treinamento.MVC.ViewModels;
 
 namespace Treinamento.MVC.Controllers
@@ -13,18 +10,28 @@ namespace Treinamento.MVC.Controllers
     public class ArquivosController : Controller
     {
 
-        private readonly ArquivoRepository _arquivoRepository = new ArquivoRepository();
+        private readonly IArquivoAppService _arquivoApp;
+
+        public ArquivosController(IArquivoAppService arquivoApp)
+        {
+            _arquivoApp = arquivoApp;
+        }
+
+
         // GET: Arquivos
         public ActionResult Index()
         {
-            var arquivoViewModel = Mapper.Map<IEnumerable<Arquivo>, IEnumerable<ArquivoViewModel>>(_arquivoRepository.GetAll());
+            var arquivoViewModel = Mapper.Map<IEnumerable<Arquivo>, IEnumerable<ArquivoViewModel>>(_arquivoApp.GetAll());
             return View(arquivoViewModel);
         }
 
         // GET: Arquivos/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var arquivo = _arquivoApp.GetById(id);
+            var arquivoViewModel = Mapper.Map<Arquivo, ArquivoViewModel>(arquivo);
+
+            return View(arquivoViewModel);
         }
 
         // GET: Arquivos/Create
@@ -41,7 +48,7 @@ namespace Treinamento.MVC.Controllers
             if (ModelState.IsValid)
             {
                 var arquivoDomain = Mapper.Map<ArquivoViewModel, Arquivo>(arquivo);
-                _arquivoRepository.Add(arquivoDomain);
+                _arquivoApp.Add(arquivoDomain);
 
                 return RedirectToAction("Index");
             }
@@ -52,45 +59,46 @@ namespace Treinamento.MVC.Controllers
         // GET: Arquivos/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var arquivo = _arquivoApp.GetById(id);
+            var arquivoViewModel = Mapper.Map<Arquivo, ArquivoViewModel>(arquivo);
+
+            return View(arquivoViewModel);
         }
 
         // POST: Arquivos/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(ArquivoViewModel arquivo)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
+                var arquivoDomain = Mapper.Map<ArquivoViewModel, Arquivo>(arquivo);
+                _arquivoApp.Update(arquivoDomain);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(arquivo);
         }
 
         // GET: Arquivos/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var arquivo = _arquivoApp.GetById(id);
+            var arquivoViewModel = Mapper.Map<Arquivo, ArquivoViewModel>(arquivo);
+
+            return View(arquivoViewModel);
         }
 
         // POST: Arquivos/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            var arquivo = _arquivoApp.GetById(id);
+            _arquivoApp.Remove(arquivo);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }
