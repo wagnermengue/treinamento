@@ -4,11 +4,11 @@ using Treinamento.Domain.Interfaces.Services;
 
 namespace Treinamento.Domain.Services
 {
-    public class TipoCotatoService : ServiceBase<TipoContato>, ITipoContatoService
+    public class TipoContatoService : ServiceBase<TipoContato>, ITipoContatoService
     {
         private readonly ITipoContatoRepository _tipoContatoRepository;
 
-        public TipoCotatoService(ITipoContatoRepository tipoContatoRepository)
+        public TipoContatoService(ITipoContatoRepository tipoContatoRepository)
             :base(tipoContatoRepository)
         {
             _tipoContatoRepository = tipoContatoRepository;

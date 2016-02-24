@@ -72,7 +72,7 @@
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\StatusService.cs" />
     <Compile Include="Services\TarefaService.cs" />
-    <Compile Include="Services\TipoCotatoService.cs" />
+    <Compile Include="Services\TipoContatoService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup />
