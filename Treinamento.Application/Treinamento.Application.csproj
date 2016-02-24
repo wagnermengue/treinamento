@@ -42,9 +42,27 @@
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="ArquivoAppService.cs" />
+    <Compile Include="ContatoAppService.cs" />
+    <Compile Include="EnderecoAppService.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
     <Compile Include="Interfaces\IArquivoAppService.cs" />
+    <Compile Include="Interfaces\IContatoAppService.cs" />
+    <Compile Include="Interfaces\IEnderecoAppService.cs" />
+    <Compile Include="Interfaces\IPessoaAppService.cs" />
+    <Compile Include="Interfaces\IPrioridadeAppService.cs" />
+    <Compile Include="Interfaces\IProjetoAppService.cs" />
+    <Compile Include="Interfaces\IStatusAppService.cs" />
+    <Compile Include="Interfaces\ITarefaAppService.cs" />
+    <Compile Include="Interfaces\ITipoContatoAppService.cs" />
+    <Compile Include="Interfaces\IUsuarioAppService.cs" />
+    <Compile Include="PessoaAppService.cs" />
+    <Compile Include="PrioridadeAppService.cs" />
+    <Compile Include="ProjetoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusAppService.cs" />
+    <Compile Include="TarefaAppService.cs" />
+    <Compile Include="TipoContatoAppService.cs" />
+    <Compile Include="UsuarioAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Treinamento.Domain\Treinamento.Domain.csproj">
