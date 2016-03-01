@@ -8,8 +8,8 @@ namespace Treinamento.Domain.Entities
         public string Descricao { get; set; }
         public int IdPessoa { get; set; }
         public virtual Pessoa Pessoa { get; set; }
-        public DateTime DataPrevista { get; set; }
-        public DateTime DataRealizada { get; set; }
+        public DateTime? DataPrevista { get; set; }
+        public DateTime? DataRealizada { get; set; }
         public int IdStatus { get; set; }
         public virtual Status Status { get; set; }
         public int Responsavel { get; set; }

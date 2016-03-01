@@ -11,10 +11,12 @@ namespace Treinamento.MVC.Controllers
     {
 
         private readonly IArquivoAppService _arquivoApp;
+        private readonly IProjetoAppService _projetoApp;
 
-        public ArquivosController(IArquivoAppService arquivoApp)
+        public ArquivosController(IArquivoAppService arquivoApp, IProjetoAppService projetoApp)
         {
             _arquivoApp = arquivoApp;
+            _projetoApp = projetoApp;
         }
 
 
@@ -37,6 +39,7 @@ namespace Treinamento.MVC.Controllers
         // GET: Arquivos/Create
         public ActionResult Create()
         {
+            ViewBag.IdProjeto = new SelectList(_projetoApp.GetAll(), "IdProjeto", "Descricao");
             return View();
         }
 
@@ -52,7 +55,7 @@ namespace Treinamento.MVC.Controllers
 
                 return RedirectToAction("Index");
             }
-
+            ViewBag.IdProjeto = new SelectList(_projetoApp.GetAll(), "IdProjeto", "Descricao", arquivo.IdProjeto);
             return View(arquivo);
         }
 

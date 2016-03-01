@@ -12,7 +12,7 @@ namespace Treinamento.Domain.Entities
         public string Email { get; set; }
         public bool Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
-        public DateTime DataAtualizacao { get; set; }
+        public DateTime? DataAtualizacao { get; set; }
 
         public virtual IEnumerable<Tarefa> Tarefas { get; set; }
         public virtual IEnumerable<Projeto> Projetos { get; set; }

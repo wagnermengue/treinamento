@@ -13,10 +13,6 @@ namespace Treinamento.Infraestructure.Data.EntityConfig
             Property(p => p.Nome)
                 .IsRequired()
                 .HasMaxLength(150);
-
-            HasRequired(p => p.Usuario)
-                .WithMany()
-                .HasForeignKey(p => p.IdUsuario);
         }
 
     }
