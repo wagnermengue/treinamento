@@ -1,0 +1,42 @@
+﻿@model Treinamento.MVC.ViewModels.ContatoViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContatoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdContato }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

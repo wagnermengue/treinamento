@@ -9,6 +9,7 @@ namespace Treinamento.MVC.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<ArquivoViewModel, Arquivo>().ReverseMap();
+            Mapper.CreateMap<ContatoViewModel, Contato>().ReverseMap();
         }
     }
 }
