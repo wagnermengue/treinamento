@@ -10,6 +10,7 @@ namespace Treinamento.MVC.AutoMapper
         {
             Mapper.CreateMap<Arquivo, ArquivoViewModel>().ReverseMap();
             Mapper.CreateMap<Contato, ContatoViewModel>().ReverseMap();
+            Mapper.CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
         }
     }
 }
