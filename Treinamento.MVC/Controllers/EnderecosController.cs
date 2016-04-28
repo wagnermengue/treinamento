@@ -28,73 +28,78 @@ namespace Treinamento.MVC.Controllers
         // GET: Enderecos/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var endereco = _enderecoApp.GetById(id);
+            var enderecoViewModel = Mapper.Map<Endereco, EnderecoViewModel>(endereco);
+
+            return View(enderecoViewModel);
         }
 
         // GET: Enderecos/Create
         public ActionResult Create()
         {
+            ViewBag.IdPessoa = new SelectList(_pessoaApp.GetAll(), "IdPessoa", "Nome");
             return View();
         }
 
         // POST: Enderecos/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(EnderecoViewModel endereco)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                var enderecoDomain = Mapper.Map<EnderecoViewModel, Endereco>(endereco);
+                _enderecoApp.Add(enderecoDomain);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            ViewBag.IdPessoa = new SelectList(_pessoaApp.GetAll(), "IdPessoa", "Nome", endereco.IdPessoa);
+            return View(endereco);
         }
 
         // GET: Enderecos/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var endereco = _enderecoApp.GetById(id);
+            var enderecoViewModel = Mapper.Map<Endereco, EnderecoViewModel>(endereco);
+
+            return View(enderecoViewModel);
         }
 
         // POST: Enderecos/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(EnderecoViewModel endereco)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
+                var enderecoDomain = Mapper.Map<EnderecoViewModel, Endereco>(endereco);
+                _enderecoApp.Update(enderecoDomain);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(endereco);
         }
 
         // GET: Enderecos/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var endereco = _enderecoApp.GetById(id);
+            var enderecoViewModel = Mapper.Map<Endereco, EnderecoViewModel>(endereco);
+
+            return View(enderecoViewModel);
         }
 
         // POST: Enderecos/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            var endereco = _enderecoApp.GetById(id);
+            _enderecoApp.Remove(endereco);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }

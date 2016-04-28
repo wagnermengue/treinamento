@@ -98,7 +98,7 @@ namespace Treinamento.MVC.Controllers
         // POST: Contatos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult DeleteConfirmed(int id)
         {
             var contato = _contatoApp.GetById(id);
             _contatoApp.Remove(contato);

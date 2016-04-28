@@ -242,6 +242,10 @@
     <Content Include="Views\Contatos\Details.cshtml" />
     <Content Include="Views\Contatos\Edit.cshtml" />
     <Content Include="Views\Enderecos\Index.cshtml" />
+    <Content Include="Views\Enderecos\Create.cshtml" />
+    <Content Include="Views\Enderecos\Edit.cshtml" />
+    <Content Include="Views\Enderecos\Delete.cshtml" />
+    <Content Include="Views\Enderecos\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
