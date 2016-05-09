@@ -12,6 +12,7 @@ namespace Treinamento.MVC.AutoMapper
             Mapper.CreateMap<ContatoViewModel, Contato>().ReverseMap();
             Mapper.CreateMap<EnderecoViewModel, Endereco>().ReverseMap();
             Mapper.CreateMap<PessoaViewModel, Pessoa>().ReverseMap();
+            Mapper.CreateMap<PrioridadeViewModel, Prioridade>().ReverseMap();
         }
     }
 }

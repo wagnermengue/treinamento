@@ -177,6 +177,7 @@
     <Compile Include="Controllers\EnderecosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoasController.cs" />
+    <Compile Include="Controllers\PrioridadesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,6 +253,11 @@
     <Content Include="Views\Pessoas\Details.cshtml" />
     <Content Include="Views\Pessoas\Edit.cshtml" />
     <Content Include="Views\Pessoas\Delete.cshtml" />
+    <Content Include="Views\Prioridades\Index.cshtml" />
+    <Content Include="Views\Prioridades\Create.cshtml" />
+    <Content Include="Views\Prioridades\Delete.cshtml" />
+    <Content Include="Views\Prioridades\Details.cshtml" />
+    <Content Include="Views\Prioridades\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
