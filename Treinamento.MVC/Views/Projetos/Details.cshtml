@@ -1,0 +1,74 @@
+﻿@model Treinamento.MVC.ViewModels.ProjetoViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProjetoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrevista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPrevista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataRealizada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataRealizada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Responsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Responsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdProjeto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

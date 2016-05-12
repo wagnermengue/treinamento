@@ -1,0 +1,80 @@
+﻿@model Treinamento.MVC.ViewModels.ProjetoViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ProjetoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrevista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPrevista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataRealizada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataRealizada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Responsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Responsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -178,6 +178,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoasController.cs" />
     <Compile Include="Controllers\PrioridadesController.cs" />
+    <Compile Include="Controllers\ProjetosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,6 +259,11 @@
     <Content Include="Views\Prioridades\Delete.cshtml" />
     <Content Include="Views\Prioridades\Details.cshtml" />
     <Content Include="Views\Prioridades\Edit.cshtml" />
+    <Content Include="Views\Projetos\Index.cshtml" />
+    <Content Include="Views\Projetos\Delete.cshtml" />
+    <Content Include="Views\Projetos\Edit.cshtml" />
+    <Content Include="Views\Projetos\Details.cshtml" />
+    <Content Include="Views\Projetos\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

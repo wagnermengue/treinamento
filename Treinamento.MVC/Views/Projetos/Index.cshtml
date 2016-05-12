@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Treinamento.MVC.ViewModels.ProjetoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPessoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPrevista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataRealizada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Responsavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPessoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPrevista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataRealizada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ativo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdProjeto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdProjeto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdProjeto })
+        </td>
+    </tr>
+}
+
+</table>
